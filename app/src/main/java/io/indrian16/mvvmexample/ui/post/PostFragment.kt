@@ -88,7 +88,7 @@ class PostFragment : Fragment(), SwipeRefreshLayout.OnRefreshListener, PostRv.On
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        postViewModel = ViewModelProviders.of(this, viewModelFactory).get(PostViewModel::class.java)
+        postViewModel = ViewModelProviders.of(this, viewModelFactory)[PostViewModel::class.java]
 
         swipePost.setOnRefreshListener(this)
         rvPost.apply {
